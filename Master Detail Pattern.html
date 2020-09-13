@@ -1,27 +1,118 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
- 
-        <meta charset="utf-8">
-    <h1>Coding Bootcamp Registration<h1/>
-<body bgcolor="arsenic">
-<form>
-<body >
-    <div class="cont">
-        <div class="c-3 m">
-            <div class="m-item tit"><strong>Activities</strong></div>
-            <div class="m-item"><a href="poem.html" target="iname">Poem</a></div>
-            <div class="m-item"><a href="markup.html" target="iname">Markup</a></div>
-            <div class="m-item"><a href="wishlist.html" target="iname">Wishlist</a></div>
-            <div class="m-item"><a href="calendar.html" target="iname">Calendar</a></div>
-            <div class="m-item"><a href="Registration.html" target="iname">Registration</a></div>
-            <div class="m-item"><a href="VMG.html" target="iname">VMG</a></div>
-        </div>
-        <div class="c-9 det">
-            <iframe src="poem.html" name="iname" frameborder=""height="100%" width="100%"></iframe>
-          
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Tourist Spots in Taiwan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<style>
+body {font-family: Arial;}
 
-    </div>
 
-    </body>
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: skyblue;
+}
+
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+
+.tab button:hover {
+  background-color: blue;
+}
+
+
+.tab button.active {
+  background-color: blue;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 1;}
+  to {opacity: 2;}
+}
+</style>
+</head>
+<body>
+
+<h2> Tourist Spots in Taiwan</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openSpot(event,'Taipei101')">Taipei 101</button>
+  <button class="tablinks" onclick="openSpot(event, 'LungshanTemple')">Lungshan Temple</button>
+  <button class="tablinks" onclick="openSpot(event, 'Jioufen')">Jioufen</button>
+  <button class="tablinks" onclick="openSpot(event, 'ShimenTing')">Shi-men Ting</button>
+   <button class="tablinks" onclick="openSpot(event, 'ChiangKaishek')">National Chiang Kai-shek Memorial Hall</button>
+   <button class="tablinks" onclick="openSpot(event, 'ShiLin')">Shi Lin Night Market
+</button>
+</div>
+
+<div id="Taipei101" class="tabcontent">
+  <h3>Taipei 101</h3>
+  <p>A noteworthy skyscraper with 106 floors.</p>
+</div>
+
+<div id="LungshanTemple" class="tabcontent">
+  <h3>Lungshan Temple</h3>
+  <p>Histroic Buddhist and Taoist temple.</p> 
+</div>
+
+<div id="Jioufen" class="tabcontent">
+  <h3>Jioufen</h3>
+  <p> Jiufen is a mountain town in northeastern Taiwan, east of Taipei. It's known for the narrow alleyways of its old town, packed with teahouses, street-food shacks and souvenir shops.</p>
+</div>
+
+<div id="ShimenTing" class="tabcontent">
+  <h3>Shi-men Ting</h3>
+  <p>A city district known for fashion stores. </p>
+</div>
+
+<div id="ChiangKaishek" class="tabcontent">
+  <h3>National Chiang Kai-shek Memorial Hall</h3>
+  <p>It is a famous national monument, landmark and tourist attraction erected in memory of Generalissimo Chiang Kai-shek, former President of the Republic of China.</p>
+</div>
+<div id="ShiLin" class="tabcontent">
+  <h3>Shi Lin Night Market</h3>
+  <p>It is a night market in Shilin District, Taipei, Taiwan, and is often considered to be the largest and most famous night market in Taiwan.</p>
+</div>
+
+<script>
+function openSpot(evt, spotName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(spotName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>
