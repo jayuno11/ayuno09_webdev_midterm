@@ -1,21 +1,21 @@
-
 *{
   box-sizing: border-box;
-  background-position: center; 
+   background-position: center; 
 }
 body{
   background-color: #fcd753;
-  background-position: center; 
+   background-position: center; 
 }
 .container{
   background: #fcffb7;
   border-radius: 10px;
   max-width: 900px;
+   background-position: center; 
 }
 #banner{
   height: 400px;
   max-width: 900px;
-  background: url("Kobe-memorial-v3.jpg");
+  background: url("");
   background-position: center; 
   background-size: cover;
   border-style: solid;
@@ -27,6 +27,7 @@ body{
 #nba{
   padding: 5px 10px; 
   border-style: solid;
+   background-position: center; 
   border: 3px solid white;
   margin-bottom: 10px;
 }
