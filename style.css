@@ -1,9 +1,11 @@
 
 *{
   box-sizing: border-box;
+  background-position: center; 
 }
 body{
   background-color: #fcd753;
+  background-position: center; 
 }
 .container{
   background: #fcffb7;
